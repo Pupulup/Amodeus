@@ -81,9 +81,73 @@ async def get_text_messages(message):
     await message.answer('Я, конечно, в такое не верю, но дело твое', reply_markup=keyboard)
 
 
-@dp.message_handler(lambda message: message.text == "♈️ Овен ♈️" or "♉️ Телец ♉️" or "♊️ Близнецы ;3 ♊️" or
-                                    "♋️ Рак ♋️" or "♌️ Лев ♌️" or "♍️ Дева ♍️" or "♎️ Весы ♎️" or "♏️ Скорпион ♏️" or
-                                    "♐️ Стрелец ♐️" or "♑️ Козерог ♑️" or "♒️ Водолей ♒️" or "♓️ Рыбы ♓️")
+@dp.message_handler(lambda message: message.text == "♈️ Овен ♈️")
+async def oven(message: types.Message):
+    msg = random.choice(first) + '' + random.choice(second) + '' + random.choice(second_add) + '' + random.choice(third)
+    await message.reply(msg, reply_markup=types.ReplyKeyboardRemove())
+
+
+@dp.message_handler(lambda message: message.text == "♉️ Телец ♉️")
+async def oven(message: types.Message):
+    msg = random.choice(first) + '' + random.choice(second) + '' + random.choice(second_add) + '' + random.choice(third)
+    await message.reply(msg, reply_markup=types.ReplyKeyboardRemove())
+
+
+@dp.message_handler(lambda message: message.text == "♊️ Близнецы ;3 ♊️")
+async def oven(message: types.Message):
+    msg = random.choice(first) + '' + random.choice(second) + '' + random.choice(second_add) + '' + random.choice(third)
+    await message.reply(msg, reply_markup=types.ReplyKeyboardRemove())
+
+
+@dp.message_handler(lambda message: message.text == "♋️ Рак ♋️")
+async def oven(message: types.Message):
+    msg = random.choice(first) + '' + random.choice(second) + '' + random.choice(second_add) + '' + random.choice(third)
+    await message.reply(msg, reply_markup=types.ReplyKeyboardRemove())
+
+
+@dp.message_handler(lambda message: message.text == "♌️ Лев ♌️")
+async def oven(message: types.Message):
+    msg = random.choice(first) + '' + random.choice(second) + '' + random.choice(second_add) + '' + random.choice(third)
+    await message.reply(msg, reply_markup=types.ReplyKeyboardRemove())
+
+
+@dp.message_handler(lambda message: message.text == "♍️ Дева ♍️")
+async def oven(message: types.Message):
+    msg = random.choice(first) + '' + random.choice(second) + '' + random.choice(second_add) + '' + random.choice(third)
+    await message.reply(msg, reply_markup=types.ReplyKeyboardRemove())
+
+
+@dp.message_handler(lambda message: message.text == "♎️ Весы ♎️")
+async def oven(message: types.Message):
+    msg = random.choice(first) + '' + random.choice(second) + '' + random.choice(second_add) + '' + random.choice(third)
+    await message.reply(msg, reply_markup=types.ReplyKeyboardRemove())
+
+
+@dp.message_handler(lambda message: message.text == "♏️ Скорпион ♏️")
+async def oven(message: types.Message):
+    msg = random.choice(first) + '' + random.choice(second) + '' + random.choice(second_add) + '' + random.choice(third)
+    await message.reply(msg, reply_markup=types.ReplyKeyboardRemove())
+
+
+@dp.message_handler(lambda message: message.text == "♐️ Стрелец ♐️")
+async def oven(message: types.Message):
+    msg = random.choice(first) + '' + random.choice(second) + '' + random.choice(second_add) + '' + random.choice(third)
+    await message.reply(msg, reply_markup=types.ReplyKeyboardRemove())
+
+
+@dp.message_handler(lambda message: message.text == "♑️ Козерог ♑️")
+async def oven(message: types.Message):
+    msg = random.choice(first) + '' + random.choice(second) + '' + random.choice(second_add) + '' + random.choice(third)
+    await message.reply(msg, reply_markup=types.ReplyKeyboardRemove())
+
+
+@dp.message_handler(lambda message: message.text == "♒️ Водолей ♒️")
+async def oven(message: types.Message):
+    msg = random.choice(first) + '' + random.choice(second) + '' + random.choice(second_add) + '' + random.choice(third)
+    await message.reply(msg, reply_markup=types.ReplyKeyboardRemove())
+
+
+@dp.message_handler(lambda message: message.text == "♓️ Рыбы ♓️")
 async def oven(message: types.Message):
     msg = random.choice(first) + '' + random.choice(second) + '' + random.choice(second_add) + '' + random.choice(third)
     await message.reply(msg, reply_markup=types.ReplyKeyboardRemove())
@@ -95,6 +159,7 @@ async def message_from_users(message: Message):
     dn = ["доброй ночи", "я спать", "спокойной ночи", "сладких снов"]
     mat = ["блять", "сука", "пидор", "пидарас", "пидорас", "бля", "хуй", "пизда", "пиздец", "хуйня", "ебать", "заебало",
            "нахуй", "шлюха", "хуле", "cхуяле", "kurva", "курва", 'хуям']
+    nemat = ['ублюдок']
     # vanya = ["ваня", "иван"]
     buhaem = ["бухаем", "бухаем?", "пьем?", "в кб?", "в кб", "бухать", "пить", "в бар"]
     shutka = ["(шутка)"]
@@ -106,6 +171,8 @@ async def message_from_users(message: Message):
         await message.reply("Добрых снов)")
     elif any(item in message.text.lower() for item in mat):
         await message.reply("Отжимайся!")
+    elif any(item in message.text.lower() for item in nemat):
+        await message.reply("Ублюдок - это не мат")
     elif any(item in message.text.lower() for item in buhaem):
         await message.reply("ДА!")
     elif any(item in message.text.lower() for item in shutka):
@@ -162,7 +229,6 @@ async def message_from_users(message: Message):
 
     finally:
         return
-
 
 '''
 async def dolgi_timer(bot: Bot):
