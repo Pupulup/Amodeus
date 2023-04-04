@@ -23,9 +23,7 @@ from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
 import requests
-
-API_TOKEN = 'токен бота'
-vafli_group_id = 'id группы'
+from secret_info import API_TOKEN, vafli_group_id
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
@@ -50,7 +48,7 @@ async def helper(message: types.Message):
 
 
 # ПОГОДА СПБ
-open_weather_token = 'токен open weather'
+open_weather_token = 'fa0456e7c5a170b23b4f0236824c5d7a'
 type_weather = {
     "Clear": "Ясно",
     "Clouds": "Облачно",
@@ -158,7 +156,7 @@ async def oven(message: types.Message):
 async def message_from_users(message: Message):
     dn = ["доброй ночи", "я спать", "спокойной ночи", "сладких снов"]
     mat = ["блять", "сука", "пидор", "пидарас", "пидорас", "бля", "хуй", "пизда", "пиздец", "хуйня", "ебать", "заебало",
-           "нахуй", "шлюха", "хуле", "cхуяле", "kurva", "курва", 'хуям']
+           "нахуй", "шлюха", "хуле", "cхуяле", "kurva", "курва", 'хуям', 'ебало', 'спизил']
     nemat = ['ублюдок']
     # vanya = ["ваня", "иван"]
     buhaem = ["бухаем", "бухаем?", "пьем?", "в кб?", "в кб", "бухать", "пить", "в бар"]
