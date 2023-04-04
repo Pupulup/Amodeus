@@ -24,8 +24,8 @@ from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
 import requests
 
-API_TOKEN = '6018383215:AAF_ROvyrLi9hYmeq2S5LXzhHORzRQDJ_i0'
-vafli_group_id = '-1001952449676'
+API_TOKEN = 'токен бота'
+vafli_group_id = 'id группы'
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
@@ -50,7 +50,7 @@ async def helper(message: types.Message):
 
 
 # ПОГОДА СПБ
-open_weather_token = 'fa0456e7c5a170b23b4f0236824c5d7a'
+open_weather_token = 'токен open weather'
 type_weather = {
     "Clear": "Ясно",
     "Clouds": "Облачно",
