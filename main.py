@@ -170,7 +170,6 @@ async def message_from_users(message: Message):
     mat = ["блять", "сука", "пидор", "пидарас", "пидорас", "бля", "хуй", "пизда", "пиздец", "хуйня", "ебать", "заебало",
            "нахуй", "шлюха", "хуле", "cхуяле", "kurva", "курва", 'хуям', 'ебало', 'спизил']
     nemat = ['ублюдок']
-    # vanya = ["ваня", "иван"]
     buhaem = ["бухаем", "бухаем?", "пьем?", "в кб?", "в кб", "бухать", "пить", "в бар"]
     shutka = ["(шутка)"]
     tilt = ["я в тильте"]
@@ -198,9 +197,6 @@ async def message_from_users(message: Message):
     elif any(item in message.text.lower() for item in okno):
         await bot.send_sticker(message.chat.id,
                                "CAACAgUAAxkBAAEIaZVkKEw8r1wQUN5GzDKnURKzJdjJUwACCQkAAnQr4AUYavnANwt75y8E")
-
-    # elif any(item in message.text.lower() for item in vanya):
-    #   await message.reply("сдохни")
 
     # ПОГОДА
     try:
